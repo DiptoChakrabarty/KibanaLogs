@@ -2,10 +2,10 @@ from flask import Flask
 import logging
 
 app = Flask(__name__)
-logging.basicConfig(level=logging.DEBUG,
-        filename="app.log",
-        format='%(asctime)s %(levelname)s-%(message)s',
-        datefmt='%Y-%m-%d %H:%M:%S')
+
+from logging.config import fileConfig
+
+fileConfig('logging.cfg')
 
 @app.route("/")
 def home():

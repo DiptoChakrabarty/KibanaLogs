@@ -19,8 +19,8 @@ filebeat.prospectors:
     
       # Paths that should be crawled and fetched. Glob based paths.
       paths:
-        #- /var/log/*.log
-        - /opt/tomcat/logs/catalina.out
+        #- /var/log/*.log                  #######SEE HERE ################
+        - /opt/tomcat/logs/catalina.out   ##############Log file path
         #- c:\programdata\elasticsearch\logs\*
     
       # Exclude lines. A list of regular expressions to match. It drops the lines that are
